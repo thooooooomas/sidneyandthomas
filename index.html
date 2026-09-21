@@ -1,1 +1,173 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidney & Thomas</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+      :root {
+        --paper-bg: #efe8d7;
+        --ink: #7a7668;
+        --ink-soft: rgba(122, 118, 104, 0.8);
+        --panel: rgba(255, 255, 255, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        margin: 0;
+        width: 100%;
+        min-height: 100%;
+        font-family: 'Great Vibes', cursive;
+        background: var(--paper-bg);
+        color: var(--ink);
+      }
+
+      body {
+        min-height: 100vh;
+        background-image: url('assets/background.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+      }
+
+      .invitation {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .text-panel {
+        position: absolute;
+        left: 120px;
+        top: 120px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 760px;
+        text-align: center;
+        word-spacing: 16px;
+        z-index: 1;
+      }
+
+      .text-line {
+        display: inline-block;
+        padding: 4px 20px 2px 16px;
+        background: rgba(255, 255, 255, 0.10);
+        border-radius: 4px;
+        font-size: 68px;
+        line-height: 0.92;
+        letter-spacing: 0.03em;
+        color: rgba(123, 118, 105, 0.82);
+        font-weight: 400;
+        font-style: normal;
+        text-shadow: 0 0 1px rgba(123, 118, 105, 0.3);
+        white-space: nowrap;
+      }
+
+      .name-line {
+        margin-left: -8px;
+        padding-left: 22px;
+        font-size: 78px;
+      }
+
+      .date-line {
+        margin-top: 80px;
+        padding-left: 18px;
+        font-size: 60px;
+      }
+
+      .flower-wrap {
+        transform: scaleX(-1);
+      }
+
+      .flower-wrap img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+      }
+
+      .note {
+        position: absolute;
+        right: 120px;
+        bottom: 120px;
+        text-align: center;
+        font-family: 'Times New Roman';
+        line-height: 5;
+        letter-spacing: 0.02em;
+      }
+
+      .note .small {
+        display: block;
+        margin-top: 18px;
+        font-size: 16px;
+        color: rgba(123, 118, 105, 0.9);
+      }
+
+      @media (max-width: 800px) {
+        .text-panel {
+          left: 30px;
+          top: 30px;
+          width: 62vw;
+          gap: 8px;
+        }
+
+        .text-line {
+          font-size: 42px;
+          white-space: normal;
+        }
+
+        .date-line {
+          margin-top: 20px;
+        }
+
+        .flower-wrap {
+          right: -35px;
+          top: 80px;
+          width: 60vw;
+          height: 52vh;
+        }
+
+        .note {
+          right: 20px;
+          bottom: 30px;
+          width: 200px;
+        }
+
+        .note .small {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="invitation" aria-label="Wedding invitation">
+      <div class="text-panel">
+        <div class="text-line name-line">Sidney and Thomas</div>
+        <div class="text-line">are getting</div>
+        <div class="text-line">married in</div>
+        <div class="text-line">El Nido, Palawan,</div>
+        <div class="text-line">Philippines</div>
+        <div class="text-line date-line">December 3rd and 4th, 2027</div>
+      </div>
+
+      <div class="flower-wrap">
+        <img src="assets/flower_illustration.png" alt="Flower illustration" />
+      </div>
+
+      <div class="note">
+        <span class="small">we hope you can join us for a private island getaway...</span>
+        <span class="small">formal invitation to follow</span>
+        <span class="small">in the meantime, please fill out this interest form</span>
+      </div>
+    </main>
+  </body>
+</html>
