@@ -6,10 +6,10 @@ const basePath =
 export default function Home() {
   return (
     <div
-      className="flex min-h-screen flex-col bg-cover bg-center text-[#171713] lg:h-svh lg:min-h-0"
+      className="flex h-dvh flex-col overflow-hidden bg-cover bg-center text-[#171713] lg:min-h-0"
       style={{ backgroundImage: `url("${basePath}/background.png")` }}
     >
-      <header className="flex justify-end px-5 pt-4 sm:px-8 sm:pt-6">
+      <header className="flex shrink-0 justify-end px-5 pt-4 sm:px-8 sm:pt-6">
         <Image
           src={`${basePath}/stamp.jpg`}
           alt="Philippine orchid postage stamp, 20 pesos"
@@ -20,8 +20,8 @@ export default function Home() {
         />
       </header>
 
-      <main className="mx-auto grid w-full max-w-[1600px] flex-1 grid-cols-[minmax(0,1fr)] grid-rows-[58vh_auto] sm:px-10 lg:min-h-0 lg:grid-cols-[38%_31%_31%] lg:grid-rows-1 lg:px-16 lg:pb-0 lg:pt-0">
-        <section className="z-10 col-start-1 row-start-1 flex min-h-[52vh] flex-col items-center justify-center gap-16 pt-[5vh] text-center font-script text-[clamp(2rem,8vw,5rem)] font-normal leading-[1.05] text-[#77776f] lg:col-start-1 lg:min-h-0 lg:w-full lg:items-center lg:gap-8 lg:pb-[13vh] lg:pt-[3vh] lg:text-center lg:text-[clamp(2.5rem,4.3vw,4.5rem)]">
+      <main className="mx-auto grid min-h-0 w-full max-w-[1600px] flex-1 grid-cols-[minmax(0,1fr)] grid-rows-[minmax(0,1fr)_auto] sm:px-10 lg:grid-cols-[38%_31%_31%] lg:grid-rows-1 lg:px-16">
+        <section className="z-10 col-start-1 row-start-1 flex min-h-[52dvh] flex-col items-center justify-center gap-16 pt-[5dvh] text-center font-script text-[clamp(2rem,8vw,5rem)] font-normal leading-[1.05] text-[#77776f] lg:col-start-1 lg:min-h-0 lg:w-full lg:items-center lg:gap-8 lg:pb-[13dvh] lg:pt-[3dvh] lg:text-center lg:text-[clamp(2.5rem,4.3vw,4.5rem)]">
           <h1 className="max-w-full">
             Sidney and Thomas
             <br />
@@ -44,13 +44,13 @@ export default function Home() {
           alt="Illustration of a flowering orchid"
           width={1531}
           height={1798}
-          className="z-0 col-start-1 row-start-1 mt-[18vh] h-auto w-full self-start object-contain lg:col-start-2 lg:col-end-4 lg:row-end-2 lg:mt-0 lg:w-[651px] lg:max-w-none lg:justify-self-center lg:self-end lg:object-bottom"
+          className="z-0 col-start-1 row-start-1 mt-[18dvh] h-auto w-full self-start object-contain lg:col-start-2 lg:col-end-4 lg:row-end-2 lg:mt-0 lg:w-[651px] lg:max-w-none lg:justify-self-center lg:self-end lg:object-bottom"
           priority
         />
 
         <section
           aria-label="Wedding invitation information"
-          className="z-10 col-start-1 col-end-2 row-start-2 ml-auto mr-4 flex w-[45%] max-w-full flex-col items-center gap-5 pt-[8vh] text-center font-serif text-xs leading-relaxed lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:ml-0 lg:mr-0 lg:w-full lg:justify-self-end lg:justify-end lg:self-end lg:pb-[10vh] lg:pt-0 lg:text-right lg:text-base"
+          className="z-10 col-start-1 col-end-2 row-start-2 ml-auto mr-4 flex w-[45%] max-w-full flex-col items-center gap-5 pt-[8dvh] text-center font-serif text-xs leading-relaxed lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:ml-0 lg:mr-0 lg:w-full lg:justify-self-end lg:justify-end lg:self-end lg:pb-[10dvh] lg:pt-0 lg:text-right lg:text-base"
         >
           <p className="max-w-[24rem]">
             we hope you can join us for a private island getaway
