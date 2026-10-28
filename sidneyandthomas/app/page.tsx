@@ -60,7 +60,7 @@ export default function Home() {
           alt="Illustration of a flowering orchid"
           width={1531}
           height={1798}
-          className="z-0 col-start-1 row-start-1 mt-[18dvh] h-auto w-full rotate-3 self-start object-contain lg:col-start-1 lg:col-end-4 lg:row-end-2 lg:mt-0 lg:w-[65vw] lg:max-w-[900px] lg:justify-self-end lg:object-bottom"
+          className="z-0 col-start-1 row-start-1 mt-[18dvh] h-auto w-full rotate-3 self-start object-contain opacity-50 lg:col-start-1 lg:col-end-4 lg:row-end-2 lg:mt-0 lg:w-[65vw] lg:max-w-[900px] lg:justify-self-end lg:object-bottom lg:opacity-100"
           priority
         />
 
