@@ -12,6 +12,7 @@ import cannonBeachRockImage from "../assets/proposal/cannon/rock.jpeg";
 import cannonBeachKellyImage from "../assets/proposal/cannon/kelly.jpeg";
 import cannonBeachDanAndKellyImage from "../assets/proposal/cannon/danandkelly.jpeg";
 import { ProposalHeaderLayers } from "../site-header";
+import PhotoViewer, { type PhotoViewerImage } from "./photo-viewer";
 // kiwanda images
 import kiwandaArrivalImage from "../assets/proposal/kiwanda/arrival.jpeg";
 import kiwandaBeachImage from "../assets/proposal/kiwanda/beach.jpg";
@@ -20,6 +21,28 @@ import kiwandaSidAndThomasDuneNowImage from "../assets/proposal/kiwanda/sidandth
 import kiwandaSidAndThomasDuneThenImage from "../assets/proposal/kiwanda/sidandthomas_dune_then.jpeg";
 import kiwandaTidepoolsImage from "../assets/proposal/kiwanda/tidepools.jpeg";
 
+const photoSequence: PhotoViewerImage[] = [
+  { src: carImage, alt: "Beginning of the road trip in Seattle" },
+  { src: drivingImage, alt: "Driving in Seattle" },
+  { src: tacosImage, alt: "Tacos in Seattle" },
+  { src: cannonBeachDrivingImage, alt: "Driving at Cannon Beach" },
+  { src: cannonBeachRoadImage, alt: "Road at Cannon Beach" },
+  { src: cannonBeachRockImage, alt: "Rock at Cannon Beach" },
+  { src: cannonBeachKellyImage, alt: "Kelly at Cannon Beach" },
+  { src: cannonBeachDanAndKellyImage, alt: "Dan and Kelly at Cannon Beach" },
+  { src: kiwandaArrivalImage, alt: "Arrival at Kiwanda" },
+  { src: kiwandaBeachImage, alt: "Beach at Kiwanda" },
+  { src: kiwandaSidAndThomasImage, alt: "Sid and Thomas at Kiwanda" },
+  { src: kiwandaSidAndThomasDuneNowImage, alt: "Sid and Thomas at Kiwanda Dune Now" },
+  { src: kiwandaSidAndThomasDuneThenImage, alt: "Sid and Thomas at Kiwanda Dune Then" },
+  { src: kiwandaTidepoolsImage, alt: "Tidepools at Kiwanda" },
+];
+
+const galleryImages = photoSequence.map((image, index) => ({
+  ...image,
+  previousIndex: index > 0 ? index - 1 : undefined,
+  nextIndex: index < photoSequence.length - 1 ? index + 1 : undefined,
+}));
 
 export default function Proposal() {
   const imageClassName = "mt-[148px] h-auto w-auto max-w-[350px] max-h-[300px]";
@@ -31,41 +54,13 @@ export default function Proposal() {
       </span>
       <div className="relative z-10 mx-auto grid w-full max-w-[1440px] grid-cols-[minmax(0,1fr)_minmax(0,0.67fr)_minmax(0,1fr)] items-stretch gap-2 px-2 pb-10 gap-4 px-4">
         <div className="col-start-1 justify-items-center">
-          <Image
-            src={carImage}
-            alt="Beginning of the road trip in Seattle"
-            className={imageClassName}
-          />
-          <Image
-            src={tacosImage}
-            alt="Tacos in Seattle"
-            className={imageClassName}
-          />
-          <Image
-            src={cannonBeachRoadImage}
-            alt="Road at Cannon Beach"
-            className={imageClassName}
-          />
-          <Image
-            src={cannonBeachKellyImage}
-            alt="Kelly at Cannon Beach"
-            className={imageClassName}
-          />
-          <Image
-            src={kiwandaArrivalImage}
-            alt="Arrival at Kiwanda"
-            className={imageClassName}
-          />
-          <Image
-            src={kiwandaSidAndThomasImage}
-            alt="Sid and Thomas at Kiwanda"
-            className={imageClassName}
-          />
-          <Image
-            src={kiwandaTidepoolsImage}
-            alt="Tidepools at Kiwanda"
-            className={imageClassName}
-          />
+          <PhotoViewer gallery={galleryImages} imageIndex={0} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={2} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={4} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={6} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={8} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={10} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={13} className={imageClassName} />
         </div>
         <div className="col-start-2 w-full">
           <Image
@@ -76,40 +71,20 @@ export default function Proposal() {
           />
         </div>
         <div className="col-start-3 justify-items-center">
-          <Image
-            src={drivingImage}
-            alt="Driving in Seattle"
-            className={imageClassName + " mt-[128px]"}
-          />
-          <Image
-            src={cannonBeachDrivingImage}
-            alt="Driving at Cannon Beach"
-            className={imageClassName}
-          />
-          <Image
-            src={cannonBeachRockImage}
-            alt="Rock at Cannon Beach"
-            className={imageClassName}
-          />
-          <Image
-            src={cannonBeachDanAndKellyImage}
-            alt="Dan and Kelly at Cannon Beach"
-            className={imageClassName}
-          />
-          <Image
-            src={kiwandaBeachImage}
-            alt="Beach at Kiwanda"
-            className={imageClassName}
-          />
+          <PhotoViewer gallery={galleryImages} imageIndex={1} className={imageClassName + " mt-[128px]"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={3} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={5} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={7} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={9} className={imageClassName} />
           <div className="grid grid-cols-[auto_auto] gap-[60px] mt-[148px]">
-            <Image
-              src={kiwandaSidAndThomasDuneNowImage}
-              alt="Sid and Thomas at Kiwanda Dune Now"
+            <PhotoViewer
+              gallery={galleryImages}
+              imageIndex={11}
               className={"h-auto w-auto max-w-[350px] max-h-[300px]"}
             />
-            <Image
-              src={kiwandaSidAndThomasDuneThenImage}
-              alt="Sid and Thomas at Kiwanda Dune Then"
+            <PhotoViewer
+              gallery={galleryImages}
+              imageIndex={12}
               className={"h-auto w-auto max-w-[350px] max-h-[300px] mt-[40px]"}
             />
           </div>
