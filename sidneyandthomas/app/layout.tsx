@@ -15,13 +15,21 @@ export const metadata: Metadata = {
     "Sidney and Thomas are getting married in El Nido, Palawan on December 3rd and 4th, 2027.",
 };
 
+const basePath =
+  process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
       className={`${customFont.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body
+        className="flex h-dvh flex-col overflow-hidden bg-cover bg-center text-[#171713]"
+        style={{ backgroundImage: `url("${basePath}/background.png")` }}
+      >
+        {children}
+      </body>
     </html>
   );
 }
