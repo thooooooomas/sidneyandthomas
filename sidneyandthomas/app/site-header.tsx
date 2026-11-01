@@ -4,8 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const basePath =
-  process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
+const basePath = process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
 
 export function WeddingNavigation() {
   const pathname = usePathname();
@@ -15,7 +14,7 @@ export function WeddingNavigation() {
       <Link
         href="/"
         aria-current={pathname === "/" ? "page" : undefined}
-        className={`whitespace-nowrap px-3 py-2 font-serif text-xs text-[#38385F] sm:text-sm ${
+        className={`whitespace-nowrap px-3 py-2 font-serif text-xs text-[#38385F] sm:text-base ${
           pathname === "/" ? "underline" : ""
         }`}
       >
@@ -24,7 +23,7 @@ export function WeddingNavigation() {
       <Link
         href="/proposal"
         aria-current={pathname === "/proposal" ? "page" : undefined}
-        className={`whitespace-nowrap px-3 py-2 font-serif text-xs text-[#38385F] sm:text-sm ${
+        className={`whitespace-nowrap px-3 py-2 font-serif text-xs text-[#38385F] sm:text-base ${
           pathname === "/proposal" ? "underline" : ""
         }`}
       >
@@ -50,7 +49,11 @@ function PostageStamp() {
 function WeddingHeader({ sticky = false }: { sticky?: boolean }) {
   return (
     <header
-      className={`${sticky ? "sticky top-0 z-20 " : ""}flex shrink-0 flex-row items-start justify-between gap-3 px-5 pt-4 sm:gap-4 sm:px-8 sm:pt-6`}
+      className={`
+        ${sticky ? "sticky top-0 z-20 " : ""}
+        flex shrink-0 flex-row items-start justify-between gap-3 px-5 pt-4
+        sm:gap-4 sm:px-8 sm:pt-6
+      `}
     >
       <WeddingNavigation />
       <PostageStamp />

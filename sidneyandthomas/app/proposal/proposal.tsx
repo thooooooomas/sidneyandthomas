@@ -49,10 +49,23 @@ export default function Proposal() {
   return (
     <main className="relative flex min-h-0 flex-1 flex-col overflow-y-auto">
       <ProposalHeaderLayers />
-      <span className="font-['Times_New_Roman'] text-[32px] text-center text-[#38385F] max-w-[940px] self-center my-[200px]">
-        This past spring, we went on a road trip down the PCH from Seattle to Big Sur with our dear friends Kelly and Daniel. The proposal is special in of itself but the stage is not set without recounting our time on the road, so, we thought we’d take the opportunity to share this with you all.
+      <span
+        className="
+          font-['Times_New_Roman'] text-[32px] text-center text-[#38385F]
+          max-w-[940px] self-center my-[200px]
+        "
+      >
+        This past spring, we went on a road trip down the PCH from Seattle to Big Sur with our dear friends Kelly and
+        Daniel. The proposal is special in of itself but the stage is not set without recounting our time on the road,
+        so, we thought we’d take the opportunity to share this with you all.
       </span>
-      <div className="relative z-10 mx-auto grid w-full max-w-[1440px] grid-cols-[minmax(0,1fr)_minmax(0,0.67fr)_minmax(0,1fr)] items-stretch gap-2 px-2 pb-10 gap-4 px-4">
+      <div
+        className="
+          relative z-10 mx-auto grid w-full max-w-[1440px]
+          grid-cols-[minmax(0,1fr)_minmax(0,0.67fr)_minmax(0,1fr)]
+          items-stretch gap-2 px-2 pb-10 gap-4 px-4
+        "
+      >
         <div className="col-start-1 justify-items-center">
           <PhotoViewer gallery={galleryImages} imageIndex={0} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={2} className={imageClassName} />

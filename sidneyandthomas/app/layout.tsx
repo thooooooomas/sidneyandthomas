@@ -11,19 +11,14 @@ const customFont = localFont({
 
 export const metadata: Metadata = {
   title: "Sidney and Thomas | El Nido, Palawan",
-  description:
-    "Sidney and Thomas are getting married in El Nido, Palawan on December 3rd and 4th, 2027.",
+  description: "Sidney and Thomas are getting married in El Nido, Palawan on December 3rd and 4th, 2027.",
 };
 
-const basePath =
-  process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
+const basePath = process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${customFont.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${customFont.variable} h-full antialiased`}>
       <body
         className="flex h-dvh flex-col overflow-hidden bg-cover bg-center text-[#171713]"
         style={{ backgroundImage: `url("${basePath}/background.png")` }}
