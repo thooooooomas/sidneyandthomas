@@ -87,11 +87,11 @@ export default function Home() {
         }
 
         .fade-in-title {
-          animation-delay: 2s;
+          animation-delay: 1.5s;
         }
 
         .fade-in-invitation {
-          animation-delay: 3s;
+          animation-delay: 2.5s;
         }
 
         @media (min-width: 64rem) {
