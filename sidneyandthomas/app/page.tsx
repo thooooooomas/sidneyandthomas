@@ -20,12 +20,11 @@ export default function Home() {
         <section
           className={`
             z-10 col-start-1 row-start-1 flex min-h-[52dvh]
-            flex-col items-center justify-center gap-16
+            flex-col items-center justify-center gap-20 [@media(max-height:700px)]:gap-10
             text-center font-script text-[clamp(2rem,40px,5rem)] text-[#3B210E] font-normal
-            absolute top-[50%] translate-y-[-50%] w-full
-            lg:static lg:top-auto lg:translate-y-0
+            w-full px-4
             lg:col-start-1 lg:min-h-0 lg:w-full lg:items-center lg:gap-14
-            lg:text-[75px] lg:leading-20 lg:opacity-61 lg:pb-[13dvh]
+            lg:text-[75px] lg:leading-20 lg:opacity-61 lg:px-0
           `}
         >
           <h1 className="font-custom max-w-full">
@@ -39,17 +38,17 @@ export default function Home() {
             <br />
             Philippines
           </h1>
-          <h1 className="font-custom max-w-full lg:text-[60px] pt-4">December 3rd and 4th, 2027</h1>
+          <h1 className="font-custom max-w-full lg:text-[60px]">December 3rd and 4th, 2027</h1>
         </section>
 
         <Image
           src={flowerImage}
           alt="Illustration of a flowering orchid"
           className={`
-            z-0 col-start-1 row-start-1 mt-[18dvh] h-auto w-full rotate-[2.4deg]
+            z-0 col-start-1 row-start-1 mt-[18dvh] h-auto max-h-[75dvh] w-full rotate-[2.4deg]
             self-start object-contain opacity-50
             lg:col-start-1 lg:col-end-4 lg:row-end-2 lg:w-[65vw]
-            lg:max-w-225 lg:justify-self-end lg:object-bottom lg:opacity-100
+            lg:max-h-[130dvh] lg:justify-self-end lg:opacity-100
             lg:-mt-10
           `}
           priority
