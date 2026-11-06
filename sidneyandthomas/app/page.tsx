@@ -13,14 +13,13 @@ export default function Home() {
         className={`
           mx-auto grid min-h-0 w-full max-w-[1600px] flex-1
           grid-cols-[minmax(0,1fr)] grid-rows-[minmax(0,1fr)_auto]
-          sm:px-10
           lg:grid-cols-[45%_auto_31%] lg:grid-rows-1 lg:px-8
         `}
       >
         <section
           className={`
             z-10 col-start-1 row-start-1 flex min-h-[52dvh]
-            flex-col items-center justify-center gap-20 [@media(max-height:700px)]:gap-10
+            flex-col items-center justify-center gap-20 [@media(max-height:700px)]:gap-0
             text-center font-script text-[clamp(2rem,40px,5rem)] text-[#3B210E] font-normal
             w-full px-4
             lg:col-start-1 lg:min-h-0 lg:w-full lg:items-center lg:gap-14
@@ -38,7 +37,7 @@ export default function Home() {
             <br />
             Philippines
           </h1>
-          <h1 className="font-custom max-w-full lg:text-[60px]">December 3rd and 4th, 2027</h1>
+          <h1 className="font-custom max-w-full text-[32px] lg:text-[60px]">December 3rd and 4th, 2027</h1>
         </section>
 
         <Image
@@ -58,7 +57,7 @@ export default function Home() {
           aria-label="Wedding invitation information"
           className={`
             z-10 col-start-1 col-end-2 row-start-2 ml-auto mr-4 flex
-            max-w-full flex-col items-center gap-5 pt-[8dvh] pb-[4dvh]
+            max-w-full flex-col items-center gap-5 py-[4dvh]
             text-center text-[#38385F] text-[10px] leading-6 font-serif
             lg:text-sm lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:ml-0 lg:mr-0
             lg:w-fit lg:justify-self-end lg:justify-end
