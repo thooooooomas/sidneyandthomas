@@ -51,8 +51,8 @@ function WeddingHeader({ sticky = false }: { sticky?: boolean }) {
     <header
       className={`
         ${sticky ? "sticky top-0 z-20 " : ""}
-        flex shrink-0 flex-row items-start justify-between gap-3 px-5 pt-4
-        sm:gap-4 sm:px-8 sm:pt-6
+        flex shrink-0 flex-row items-start justify-between gap-3 px-4 pt-4
+        sm:gap-4 sm:px-4 sm:pt-4
       `}
     >
       <WeddingNavigation />

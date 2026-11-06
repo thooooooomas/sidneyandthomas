@@ -20,11 +20,12 @@ export default function Home() {
         <section
           className={`
             z-10 col-start-1 row-start-1 flex min-h-[52dvh]
-            flex-col items-center justify-center gap-16 pt-[5dvh]
-            text-center font-script text-[clamp(2rem,8vw,5rem)] font-normal
-            leading-[1.05] text-[#3B210E]
-            lg:col-start-1 lg:min-h-0 lg:w-full lg:items-center lg:gap-8
-            lg:pb-[13dvh] lg:pt-[3dvh] lg:text-[75px]
+            flex-col items-center justify-center gap-16
+            text-center font-script text-[clamp(2rem,40px,5rem)] text-[#3B210E] font-normal
+            absolute top-[50%] translate-y-[-50%] w-full
+            lg:static lg:top-auto lg:translate-y-0
+            lg:col-start-1 lg:min-h-0 lg:w-full lg:items-center lg:gap-14
+            lg:text-[75px] lg:leading-20 lg:opacity-61 lg:pb-[13dvh]
           `}
         >
           <h1 className="font-custom max-w-full">
@@ -37,18 +38,15 @@ export default function Home() {
             El Nido, Palawan
             <br />
             Philippines
-            <br />
-            <br />
           </h1>
-
-          <h1 className="font-custom max-w-full lg:text-[60px]">December 3rd and 4th, 2027</h1>
+          <h1 className="font-custom max-w-full lg:text-[60px] pt-4">December 3rd and 4th, 2027</h1>
         </section>
 
         <Image
           src={flowerImage}
           alt="Illustration of a flowering orchid"
           className={`
-            z-0 col-start-1 row-start-1 mt-[18dvh] h-auto w-full rotate-3
+            z-0 col-start-1 row-start-1 mt-[18dvh] h-auto w-full rotate-[2.4deg]
             self-start object-contain opacity-50
             lg:col-start-1 lg:col-end-4 lg:row-end-2 lg:w-[65vw]
             lg:max-w-225 lg:justify-self-end lg:object-bottom lg:opacity-100
@@ -61,11 +59,11 @@ export default function Home() {
           aria-label="Wedding invitation information"
           className={`
             z-10 col-start-1 col-end-2 row-start-2 ml-auto mr-4 flex
-            max-w-full flex-col items-center gap-5 pt-[8dvh]
-            text-center text-[#38385F] text-sm font-serif
-            lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:ml-0 lg:mr-0
+            max-w-full flex-col items-center gap-5 pt-[8dvh] pb-[4dvh]
+            text-center text-[#38385F] text-[10px] leading-6 font-serif
+            lg:text-sm lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:ml-0 lg:mr-0
             lg:w-fit lg:justify-self-end lg:justify-end
-            lg:pb-[4dvh] lg:leading-7
+            lg:leading-7
           `}
         >
           we hope you can join us for a private island getaway…
