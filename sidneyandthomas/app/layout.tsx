@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import localFont from "next/font/local";
+import LoginGate from "./login-gate";
 
 const customFont = localFont({
   src: "./fonts/somethingelse-webfont.woff2",
@@ -23,7 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         className="flex h-dvh flex-col overflow-hidden bg-cover bg-center text-[#171713]"
         style={{ backgroundImage: `url("${basePath}/background.png")` }}
       >
-        {children}
+        <LoginGate>{children}</LoginGate>
       </body>
     </html>
   );
