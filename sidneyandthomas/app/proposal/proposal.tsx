@@ -6,6 +6,14 @@ import roadTripRouteImage from "../assets/proposal/road-trip-route.svg";
 import roadTripRouteMobileImage from "../assets/proposal/road-trip-route-mobile.svg";
 import seattleMarkerImage from "../assets/proposal/seattle-marker.svg";
 import kiwandaMarkerImage from "../assets/proposal/kiwanda-marker.svg";
+import florenceMarkerImage from "../assets/proposal/florence-marker.svg";
+import goldBeachMarkerImage from "../assets/proposal/goldbeach-marker.svg";
+import redwoodMarkerImage from "../assets/proposal/redwood-marker.svg";
+import mendocinoMarkerImage from "../assets/proposal/mendocino-marker.svg";
+import seaRanchMarkerImage from "../assets/proposal/searanch-marker.svg";
+import muirBeachMarkerImage from "../assets/proposal/muirbeach-marker.svg";
+import sfMarkerImage from "../assets/proposal/sf-marker.svg";
+import bigSurMarkerImage from "../assets/proposal/bigsur-marker.svg";
 // seattle images
 import carImage from "../assets/proposal/1_seattle/car.jpeg";
 import drivingImage from "../assets/proposal/1_seattle/driving.jpeg";
@@ -246,7 +254,8 @@ const closingMessage = `
 
 export default function Proposal() {
   const imageClassName = "w-[100%] h-fit max-w-[100%] mt-[30%] lg:px-[15%]";
-  const markerClassName = "mr-[-46px] w-[150px] justify-self-end w-20vw lg:hidden";
+  const markerClassName = "mr-[-46px] justify-self-end w-[150px] lg:hidden";
+  const rightMarkerClassName = "ml-[-46px] justify-self-start w-[150px] lg:hidden";
   return (
     <main className="relative flex min-h-0 flex-1 flex-col overflow-y-auto">
       <ProposalHeaderLayers />
@@ -274,7 +283,7 @@ export default function Proposal() {
             basePath={basePath}
             className={markerClassName + " mt-[-35px]"}
           />
-          <PhotoViewer gallery={galleryImages} imageIndex={0} className={imageClassName + " mt-[0px]"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={0} className={imageClassName + " mt-0!"} />
           <PhotoViewer gallery={galleryImages} imageIndex={2} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={4} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={6} className={imageClassName} />
@@ -285,39 +294,77 @@ export default function Proposal() {
             basePath={basePath}
             className={markerClassName}
           />
-          <PhotoViewer gallery={galleryImages} imageIndex={10} className={imageClassName + " mt-[0px]"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={10} className={imageClassName + " mt-0!"} />
           <PhotoViewer gallery={galleryImages} imageIndex={13} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={15} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={17} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={19} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={21} className={imageClassName} />
-          {continuationPhotoSequence.map(
-            (image, index) =>
-              index % 2 === 1 && (
-                <PhotoViewer
-                  key={image.alt}
-                  gallery={galleryImages}
-                  imageIndex={openingPhotoSequence.length + index}
-                  className={imageClassName}
-                />
-              ),
-          )}
+          <PhotoViewer gallery={galleryImages} imageIndex={23} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={25} className={imageClassName} />
+          <ExportedImage
+            src={goldBeachMarkerImage}
+            alt="Illustrated Gold Beach marker"
+            basePath={basePath}
+            className={markerClassName}
+          />
+          <PhotoViewer gallery={galleryImages} imageIndex={27} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={29} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={31} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={33} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={35} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={37} className={imageClassName} />
+          <ExportedImage
+            src={redwoodMarkerImage}
+            alt="Illustrated Redwoods marker"
+            basePath={basePath}
+            className={markerClassName + " mr-[-42px]!"}
+          />
+          <PhotoViewer gallery={galleryImages} imageIndex={39} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={41} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={43} className={imageClassName} />
+          <ExportedImage
+            src={mendocinoMarkerImage}
+            alt="Illustrated Mendocino marker"
+            basePath={basePath}
+            className={markerClassName}
+          />
+          <PhotoViewer gallery={galleryImages} imageIndex={45} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={47} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={49} className={imageClassName} />
+          <ExportedImage
+            src={seaRanchMarkerImage}
+            alt="Illustrated Sea Ranch marker"
+            basePath={basePath}
+            className={markerClassName}
+          />
+          <PhotoViewer gallery={galleryImages} imageIndex={51} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={53} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={55} className={imageClassName} />
+          <ExportedImage
+            src={muirBeachMarkerImage}
+            alt="Illustrated Muir Beach marker"
+            basePath={basePath}
+            className={markerClassName}
+          />
+          <PhotoViewer gallery={galleryImages} imageIndex={57} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={59} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={61} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={63} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={65} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={67} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={69} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={71} className={imageClassName} />
         </div>
-        <div className="col-start-2 w-full">
+        <div className="col-start-2 w-full hidden lg:block">
           <ExportedImage
             src={roadTripRouteImage}
             alt="Illustrated road trip route"
             basePath={basePath}
             className="pointer-events-none -mt-2 hidden h-auto w-full object-contain lg:block"
           />
-          <ExportedImage
-            src={roadTripRouteMobileImage}
-            alt=""
-            aria-hidden="true"
-            basePath={basePath}
-            className="pointer-events-none -mt-2 mx-auto block h-auto w-auto max-w-full object-contain lg:hidden"
-          />
         </div>
+        <div className="col-start-2 w-[6px] bg-[#38385F] lg:hidden"></div>
         <div className="grid auto-rows-min col-start-3 justify-items-center gap-4">
           <PhotoViewer gallery={galleryImages} imageIndex={1} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={3} className={imageClassName} />
@@ -339,18 +386,51 @@ export default function Proposal() {
           <PhotoViewer gallery={galleryImages} imageIndex={14} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={16} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={18} className={imageClassName} />
-          <PhotoViewer gallery={galleryImages} imageIndex={20} className={imageClassName} />
-          {continuationPhotoSequence.map(
-            (image, index) =>
-              index % 2 === 0 && (
-                <PhotoViewer
-                  key={image.alt}
-                  gallery={galleryImages}
-                  imageIndex={openingPhotoSequence.length + index}
-                  className={imageClassName}
-                />
-              ),
-          )}
+          <ExportedImage
+            src={florenceMarkerImage}
+            alt="Illustrated Florence marker"
+            basePath={basePath}
+            className={rightMarkerClassName}
+          />
+          <PhotoViewer gallery={galleryImages} imageIndex={20} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={22} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={24} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={26} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={28} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={30} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={32} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={34} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={36} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={38} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={40} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={42} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={44} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={46} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={48} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={50} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={52} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={54} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={56} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={58} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={60} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={62} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={64} className={imageClassName} />
+          <ExportedImage
+            src={sfMarkerImage}
+            alt="Illustrated San Francisco marker"
+            basePath={basePath}
+            className={rightMarkerClassName}
+          />
+          <PhotoViewer gallery={galleryImages} imageIndex={66} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={68} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={70} className={imageClassName} />
+          <PhotoViewer gallery={galleryImages} imageIndex={72} className={imageClassName} />
+          <ExportedImage
+            src={bigSurMarkerImage}
+            alt="Illustrated Big Sur marker"
+            basePath={basePath}
+            className={rightMarkerClassName}
+          />
         </div>
       </div>
       <section className="mx-auto max-w-235 px-8 pb-20 font-['Times_New_Roman'] text-xl leading-relaxed text-[#38385F]">
