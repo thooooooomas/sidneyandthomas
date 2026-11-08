@@ -184,6 +184,7 @@ const galleryImages = photoSequence.map((image, index) => ({
   nextIndex: index < photoSequence.length - 1 ? index + 1 : undefined,
 }));
 
+/* eslint-disable max-len */
 const closingMessage = `
   Truly nothing could have prepared us for how perfect this moment could be.
   Sidney and I had done this road trip before in our early years, I had just gotten a driver's license.
@@ -241,9 +242,10 @@ const closingMessage = `
   Thank you for your endless love, support, friendship, in times of need and in times of joy.
   We cannot wait to celebrate with you all on our wedding day.
 `;
+/* eslint-enable max-len */
 
 export default function Proposal() {
-  const imageClassName = "w-[100%] max-w-[100%] h-fit mt-[30%] lg:px-[40px]";
+  const imageClassName = "w-[100%] h-fit max-w-[100%] mt-[30%] lg:px-[15%]";
   const markerClassName = "mr-[-46px] w-[150px] justify-self-end w-20vw lg:hidden";
   return (
     <main className="relative flex min-h-0 flex-1 flex-col overflow-y-auto">
