@@ -45,11 +45,10 @@ export default function Home() {
             src={flowerImage}
             alt="Illustration of a flowering orchid"
             className={`
-              fade-in fade-in-image z-0 col-start-1 row-start-1 mt-[18dvh] h-auto max-h-[75dvh] w-full rotate-[2.4deg]
+              fade-in fade-in-image z-0 col-start-1 row-start-1 mt-[18dvh] h-auto max-h-[75dvh] w-full
               self-start object-contain
-              lg:col-start-1 lg:col-end-4 lg:row-end-2 lg:w-[65vw]
-              lg:max-h-[130dvh] lg:justify-self-end
-              lg:-mt-10
+              lg:col-start-2 lg:col-end-4 lg:row-end-2 lg:w-[65vw] lg:max-h-[130dvh] lg:justify-self-end
+              lg:-mt-10 lg:origin-top-right lg:scale-110 lg:align-self-center
             `}
             priority
             style={{ opacity: 0 }}
