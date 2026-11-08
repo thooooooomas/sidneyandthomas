@@ -1,8 +1,10 @@
 "use client";
 
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import SiteHeader from "./site-header";
 import flowerImage from "./assets/flower.png";
+
+const basePath = process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
 
 export default function Home() {
   return (
@@ -41,9 +43,10 @@ export default function Home() {
             <h1 className="font-custom max-w-full text-[32px] lg:text-[60px]">December 3rd and 4th, 2027</h1>
           </section>
 
-          <Image
+          <ExportedImage
             src={flowerImage}
             alt="Illustration of a flowering orchid"
+            basePath={basePath}
             className={`
               fade-in fade-in-image z-0 col-start-1 row-start-1 mt-[18dvh] h-auto max-h-[75dvh] w-full
               self-start object-contain

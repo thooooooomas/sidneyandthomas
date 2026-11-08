@@ -1,8 +1,9 @@
 "use client";
 
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import stampImage from "../public/stamp.jpg";
 
 const basePath = process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
 
@@ -35,9 +36,10 @@ export function WeddingNavigation() {
 
 function PostageStamp() {
   return (
-    <Image
-      src={`${basePath}/stamp.jpg`}
+    <ExportedImage
+      src={stampImage}
       alt="Philippine orchid postage stamp, 20 pesos"
+      basePath={basePath}
       width={1000}
       height={1200}
       className="h-auto w-[50px] rotate-6"

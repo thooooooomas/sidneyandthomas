@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 // seattle images
 import carImage from "../assets/proposal/seattle/car.jpeg";
 import drivingImage from "../assets/proposal/seattle/driving.jpeg";
@@ -20,6 +20,8 @@ import kiwandaSidAndThomasImage from "../assets/proposal/kiwanda/sidandthomas.jp
 import kiwandaSidAndThomasDuneNowImage from "../assets/proposal/kiwanda/sidandthomas_dune_now.jpg";
 import kiwandaSidAndThomasDuneThenImage from "../assets/proposal/kiwanda/sidandthomas_dune_then.jpeg";
 import kiwandaTidepoolsImage from "../assets/proposal/kiwanda/tidepools.jpeg";
+
+const basePath = process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
 
 const photoSequence: PhotoViewerImage[] = [
   { src: carImage, alt: "Beginning of the road trip in Seattle" },
@@ -76,9 +78,10 @@ export default function Proposal() {
           <PhotoViewer gallery={galleryImages} imageIndex={13} className={imageClassName} />
         </div>
         <div className="col-start-2 w-full">
-          <Image
+          <ExportedImage
             src={roadTripRouteImage}
             alt="Illustrated road trip route"
+            basePath={basePath}
             className="pointer-events-none -mt-2 h-auto w-full object-contain"
             priority
           />

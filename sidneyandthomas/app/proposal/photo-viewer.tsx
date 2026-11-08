@@ -1,7 +1,10 @@
 "use client";
 
-import Image, { type StaticImageData } from "next/image";
+import ExportedImage from "next-image-export-optimizer";
+import { type StaticImageData } from "next/image";
 import { useEffect, useRef, useState } from "react";
+
+const basePath = process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
 
 type PhotoViewerProps = {
   gallery: readonly PhotoViewerImage[];
@@ -57,7 +60,7 @@ export default function PhotoViewer({ gallery, imageIndex, className }: PhotoVie
           setIsOpen(true);
         }}
       >
-        <Image src={gallery[imageIndex].src} alt={gallery[imageIndex].alt} />
+        <ExportedImage src={gallery[imageIndex].src} alt={gallery[imageIndex].alt} basePath={basePath} />
       </button>
       <dialog
         ref={dialogRef}
@@ -102,9 +105,10 @@ export default function PhotoViewer({ gallery, imageIndex, className }: PhotoVie
               ❮
             </button>
           )}
-          <Image
+          <ExportedImage
             src={activeImage.src}
             alt={activeImage.alt}
+            basePath={basePath}
             sizes="90vw"
             className="h-auto max-h-[90dvh] w-auto max-w-[75vw] cursor-default object-contain"
           />
