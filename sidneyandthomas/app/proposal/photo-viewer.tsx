@@ -15,6 +15,7 @@ type PhotoViewerProps = {
 export type PhotoViewerImage = {
   src: StaticImageData;
   alt: string;
+  caption?: string;
   previousIndex?: number;
   nextIndex?: number;
 };
@@ -61,6 +62,11 @@ export default function PhotoViewer({ gallery, imageIndex, className }: PhotoVie
         }}
       >
         <ExportedImage src={gallery[imageIndex].src} alt={gallery[imageIndex].alt} basePath={basePath} />
+        {gallery[imageIndex].caption && (
+          <span className="mt-2 block text-center font-['Times_New_Roman'] text-xs text-[#38385F] lg:text-sm">
+            {gallery[imageIndex].caption}
+          </span>
+        )}
       </button>
       <dialog
         ref={dialogRef}
@@ -72,7 +78,7 @@ export default function PhotoViewer({ gallery, imageIndex, className }: PhotoVie
         onClose={() => setIsOpen(false)}
       >
         <div
-          className="relative flex h-full w-full cursor-zoom-out items-center justify-center p-4 sm:p-8"
+          className="relative flex h-full w-full cursor-zoom-out flex-col items-center justify-center gap-4 p-4 sm:p-8"
           onClick={(event) => {
             if (event.target === event.currentTarget) {
               dialogRef.current?.close();
@@ -110,8 +116,13 @@ export default function PhotoViewer({ gallery, imageIndex, className }: PhotoVie
             alt={activeImage.alt}
             basePath={basePath}
             sizes="90vw"
-            className="h-auto max-h-[90dvh] w-auto max-w-[75vw] cursor-default object-contain"
+            className="h-auto max-h-[82dvh] w-auto max-w-[75vw] cursor-default object-contain"
           />
+          {activeImage.caption && (
+            <p className="max-w-[75vw] text-center font-['Times_New_Roman'] text-xs text-[#38385F] lg:text-sm">
+              {activeImage.caption}
+            </p>
+          )}
           {activeImage.nextIndex !== undefined && (
             <button
               type="button"
