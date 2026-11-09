@@ -3,7 +3,6 @@ import { ProposalHeaderLayers } from "../site-header";
 import PhotoViewer, { type PhotoViewerImage } from "./photo-viewer";
 // road trip route image
 import roadTripRouteImage from "../assets/proposal/road-trip-route.svg";
-import roadTripRouteMobileImage from "../assets/proposal/road-trip-route-mobile.svg";
 import seattleMarkerImage from "../assets/proposal/seattle-marker.svg";
 import kiwandaMarkerImage from "../assets/proposal/kiwanda-marker.svg";
 import florenceMarkerImage from "../assets/proposal/florence-marker.svg";
@@ -283,7 +282,7 @@ export default function Proposal() {
             basePath={basePath}
             className={markerClassName + " mt-[-35px]"}
           />
-          <PhotoViewer gallery={galleryImages} imageIndex={0} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={0} className={imageClassName + " max-lg:mt-0!"} />
           <PhotoViewer gallery={galleryImages} imageIndex={2} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={4} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={6} className={imageClassName} />
@@ -294,7 +293,7 @@ export default function Proposal() {
             basePath={basePath}
             className={markerClassName}
           />
-          <PhotoViewer gallery={galleryImages} imageIndex={10} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={10} className={imageClassName + " max-lg:mt-0!"} />
           <PhotoViewer gallery={galleryImages} imageIndex={13} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={15} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={17} className={imageClassName} />
@@ -308,7 +307,7 @@ export default function Proposal() {
             basePath={basePath}
             className={markerClassName}
           />
-          <PhotoViewer gallery={galleryImages} imageIndex={27} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={27} className={imageClassName + " max-lg:mt-0!"} />
           <PhotoViewer gallery={galleryImages} imageIndex={29} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={31} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={33} className={imageClassName} />
@@ -320,7 +319,7 @@ export default function Proposal() {
             basePath={basePath}
             className={markerClassName + " mr-[-42px]!"}
           />
-          <PhotoViewer gallery={galleryImages} imageIndex={39} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={39} className={imageClassName + " max-lg:mt-0!"} />
           <PhotoViewer gallery={galleryImages} imageIndex={41} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={43} className={imageClassName} />
           <ExportedImage
@@ -329,7 +328,7 @@ export default function Proposal() {
             basePath={basePath}
             className={markerClassName}
           />
-          <PhotoViewer gallery={galleryImages} imageIndex={45} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={45} className={imageClassName + " max-lg:mt-0!"} />
           <PhotoViewer gallery={galleryImages} imageIndex={47} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={49} className={imageClassName} />
           <ExportedImage
@@ -338,7 +337,7 @@ export default function Proposal() {
             basePath={basePath}
             className={markerClassName}
           />
-          <PhotoViewer gallery={galleryImages} imageIndex={51} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={51} className={imageClassName + " max-lg:mt-0!"} />
           <PhotoViewer gallery={galleryImages} imageIndex={53} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={55} className={imageClassName} />
           <ExportedImage
@@ -347,7 +346,7 @@ export default function Proposal() {
             basePath={basePath}
             className={markerClassName}
           />
-          <PhotoViewer gallery={galleryImages} imageIndex={57} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={57} className={imageClassName + " max-lg:mt-0!"} />
           <PhotoViewer gallery={galleryImages} imageIndex={59} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={61} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={63} className={imageClassName} />
@@ -356,12 +355,12 @@ export default function Proposal() {
           <PhotoViewer gallery={galleryImages} imageIndex={69} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={71} className={imageClassName} />
         </div>
-        <div className="col-start-2 w-full hidden lg:block">
+        <div className="col-start-2 h-[100%] hidden lg:flex">
           <ExportedImage
             src={roadTripRouteImage}
             alt="Illustrated road trip route"
             basePath={basePath}
-            className="pointer-events-none -mt-2 hidden h-auto w-full object-contain lg:block"
+            className="pointer-events-none -mt-2 hidden h-0 min-h-full object-fill lg:block"
           />
         </div>
         <div className="col-start-2 w-[6px] bg-[#38385F] lg:hidden"></div>
@@ -392,7 +391,7 @@ export default function Proposal() {
             basePath={basePath}
             className={rightMarkerClassName}
           />
-          <PhotoViewer gallery={galleryImages} imageIndex={20} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={20} className={imageClassName + " max-lg:mt-0!"} />
           <PhotoViewer gallery={galleryImages} imageIndex={22} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={24} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={26} className={imageClassName} />
@@ -421,7 +420,7 @@ export default function Proposal() {
             basePath={basePath}
             className={rightMarkerClassName}
           />
-          <PhotoViewer gallery={galleryImages} imageIndex={66} className={imageClassName + " mt-0!"} />
+          <PhotoViewer gallery={galleryImages} imageIndex={66} className={imageClassName + " max-lg:mt-0!"} />
           <PhotoViewer gallery={galleryImages} imageIndex={68} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={70} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={72} className={imageClassName} />

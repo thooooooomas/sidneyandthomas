@@ -23,6 +23,7 @@ export type PhotoViewerImage = {
 export default function PhotoViewer({ gallery, imageIndex, className }: PhotoViewerProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(imageIndex);
+  const image = gallery[imageIndex];
   const activeImage = gallery[activeIndex];
   const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -54,17 +55,31 @@ export default function PhotoViewer({ gallery, imageIndex, className }: PhotoVie
     <>
       <button
         type="button"
-        aria-label={`Open full-size image: ${gallery[imageIndex].alt}`}
+        aria-label={`Open full-size image: ${image.alt}`}
         className={"outline-none focus:outline-none focus-visible:outline-none" + (className ? " " + className : "")}
+        style={{ width: "100%" }}
         onClick={() => {
           setActiveIndex(imageIndex);
           setIsOpen(true);
         }}
       >
-        <ExportedImage src={gallery[imageIndex].src} alt={gallery[imageIndex].alt} basePath={basePath} />
-        {gallery[imageIndex].caption && (
+        <span
+          className="relative mx-auto block max-w-full"
+          style={{
+            width: `min(100%, ${image.src.width}px)`,
+            aspectRatio: `${image.src.width} / ${image.src.height}`,
+          }}
+        >
+          <ExportedImage
+            src={image.src}
+            alt={image.alt}
+            basePath={basePath}
+            className="absolute inset-0 h-full w-full object-contain"
+          />
+        </span>
+        {image.caption && (
           <span className="mt-2 block text-center font-['Times_New_Roman'] text-xs text-[#38385F] lg:text-sm">
-            {gallery[imageIndex].caption}
+            {image.caption}
           </span>
         )}
       </button>
