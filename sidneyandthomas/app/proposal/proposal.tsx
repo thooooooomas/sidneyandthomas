@@ -275,7 +275,7 @@ export default function Proposal() {
           items-stretch pb-10 gap-8 px-8 lg:gap-4 lg:px-4
         "
       >
-        <div className="grid auto-rows-min col-start-1 justify-items-center gap-4">
+        <div className="grid auto-rows-min col-start-1 justify-items-center gap-4 max-lg:content-between">
           <ExportedImage
             src={seattleMarkerImage}
             alt="Illustrated Seattle marker"
@@ -364,7 +364,7 @@ export default function Proposal() {
           />
         </div>
         <div className="col-start-2 w-[6px] bg-[#38385F] lg:hidden"></div>
-        <div className="grid auto-rows-min col-start-3 justify-items-center gap-4">
+        <div className="grid auto-rows-min col-start-3 justify-items-center gap-4 max-lg:content-between">
           <PhotoViewer gallery={galleryImages} imageIndex={1} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={3} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={5} className={imageClassName} />
