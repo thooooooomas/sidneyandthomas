@@ -356,7 +356,7 @@ const closingMessage = `
   We debrief, I tell everyone how all this came together, how it was kept a secret, how I had zero cell service throughout the trip to communicate with the photographers, how I was keeping the plan on track.
   Most of all we talk about how special this moment and trip had been. Truly, every day of the trip was better than the last and proposing to the love of my life was the best way to cap it off.
 
-  The next 24 hours was the most relaxed I have ever been. Enjoying the infinity pool, Chez Celine good company.
+  The next 24 hours was the most relaxed I have ever been. Enjoying the infinity pool, amazing food and drink, great views, and the best company.
 
   ---
 
@@ -364,6 +364,8 @@ const closingMessage = `
   We are so excited to share this next chapter of our lives with you all.
   Thank you for your endless love, support, friendship, in times of need and in times of joy.
   We cannot wait to celebrate with you all on our wedding day.
+
+  -- Thomas
 `;
 /* eslint-enable max-len */
 
@@ -486,7 +488,7 @@ export default function Proposal() {
           <PhotoViewer gallery={galleryImages} imageIndex={5} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={7} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={9} className={imageClassName} />
-          <div className="w-full grid grid-cols-2 gap-[60px] mt-[148px]">
+          <div className="w-full grid grid-cols-2 gap-[20px] mt-[148px] lg:gap-[60px]">
             <PhotoViewer
               gallery={galleryImages}
               imageIndex={11}
