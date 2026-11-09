@@ -74,7 +74,7 @@ export default function Home() {
             formal invitation to follow
             <br />
             <br />
-            in the meantime, <a href="https://forms.gle/HYxDW1EeCmwfPfXe8">please fill out this interest form</a>
+            <p>in the meantime, <a href="https://forms.gle/HYxDW1EeCmwfPfXe8" className="underline">please fill out this interest form</a></p>
           </section>
         </main>
       </div>
