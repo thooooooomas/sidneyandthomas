@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import stampImage from "../public/stamp.jpg";
 
-const basePath = process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function WeddingNavigation() {
   const pathname = usePathname();

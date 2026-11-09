@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: "Sidney and Thomas are getting married in El Nido, Palawan on December 3rd and 4th, 2027.",
 };
 
-const basePath = process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

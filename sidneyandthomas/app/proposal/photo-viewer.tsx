@@ -4,7 +4,7 @@ import ExportedImage from "next-image-export-optimizer";
 import { type StaticImageData } from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-const basePath = process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 type PhotoViewerProps = {
   gallery: readonly PhotoViewerImage[];

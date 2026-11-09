@@ -4,7 +4,7 @@ import ExportedImage from "next-image-export-optimizer";
 import SiteHeader from "./site-header";
 import flowerImage from "./assets/flower.png";
 
-const basePath = process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export default function Home() {
   return (

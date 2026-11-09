@@ -113,7 +113,7 @@ import proposal13Image from "../assets/proposal/last/13P.jpeg";
 import proposal14Image from "../assets/proposal/last/14P.jpeg";
 import proposal15Image from "../assets/proposal/last/15P.jpeg";
 
-const basePath = process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const openingPhotoSequence: PhotoViewerImage[] = [
   {
