@@ -42,6 +42,7 @@ function PostageStamp() {
       basePath={basePath}
       width={1000}
       height={1200}
+      sizes="50px"
       className="h-auto w-[50px] rotate-6"
       priority
     />

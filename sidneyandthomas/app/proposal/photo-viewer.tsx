@@ -10,6 +10,9 @@ type PhotoViewerProps = {
   gallery: readonly PhotoViewerImage[];
   imageIndex: number;
   className?: string;
+  sizes?: string;
+  showCaption?: boolean;
+  thumbnailClassName?: string;
 };
 
 export type PhotoViewerImage = {
@@ -20,7 +23,14 @@ export type PhotoViewerImage = {
   nextIndex?: number;
 };
 
-export default function PhotoViewer({ gallery, imageIndex, className }: PhotoViewerProps) {
+export default function PhotoViewer({
+  gallery,
+  imageIndex,
+  className,
+  sizes = "(min-width: 1440px) 522px, (min-width: 1024px) 36vw, calc(50vw - 67px)",
+  showCaption = true,
+  thumbnailClassName,
+}: PhotoViewerProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(imageIndex);
   const image = gallery[imageIndex];
@@ -64,7 +74,9 @@ export default function PhotoViewer({ gallery, imageIndex, className }: PhotoVie
         }}
       >
         <span
-          className="relative mx-auto block max-w-full"
+          className={
+            "relative mx-auto block max-w-full" + (thumbnailClassName ? ` ${thumbnailClassName}` : "")
+          }
           style={{
             width: `min(100%, ${image.src.width}px)`,
             aspectRatio: `${image.src.width} / ${image.src.height}`,
@@ -74,12 +86,17 @@ export default function PhotoViewer({ gallery, imageIndex, className }: PhotoVie
             src={image.src}
             alt={image.alt}
             basePath={basePath}
-            sizes="(min-width: 1440px) 522px, (min-width: 1024px) 36vw, calc(50vw - 67px)"
+            sizes={sizes}
             className="absolute inset-0 h-full w-full object-contain"
           />
         </span>
-        {image.caption && (
-          <span className="mt-2 block text-center font-['Times_New_Roman'] text-xs text-[#38385F] lg:text-sm">
+        {showCaption && image.caption && (
+          <span
+            className={`
+              mt-2 block whitespace-pre-line text-center
+              font-['Times_New_Roman'] text-xs text-[#38385F] lg:text-sm
+            `}
+          >
             {image.caption}
           </span>
         )}
@@ -135,7 +152,12 @@ export default function PhotoViewer({ gallery, imageIndex, className }: PhotoVie
             className="h-auto max-h-[82dvh] w-auto max-w-[75vw] cursor-default object-contain"
           />
           {activeImage.caption && (
-            <p className="max-w-[75vw] text-center font-['Times_New_Roman'] text-xs text-[#38385F] lg:text-sm">
+            <p
+              className={`
+                max-w-[75vw] whitespace-pre-line text-center
+                font-['Times_New_Roman'] text-xs text-[#38385F] lg:text-sm
+              `}
+            >
               {activeImage.caption}
             </p>
           )}

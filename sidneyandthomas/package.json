@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next-image-export-optimizer --nextConfigPath next.config.ts",
+    "export:preview": "npx serve out",
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write app",

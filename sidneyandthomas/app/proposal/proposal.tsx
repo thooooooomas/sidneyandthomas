@@ -97,6 +97,21 @@ import bigSur4Image from "../assets/proposal/11_bigsur/4BS.jpeg";
 import bigSur5Image from "../assets/proposal/11_bigsur/5BS.jpeg";
 import bigSur6Image from "../assets/proposal/11_bigsur/6BS.jpg";
 import bigSur7Image from "../assets/proposal/11_bigsur/7BS.jpeg";
+import proposal1Image from "../assets/proposal/last/1P.jpeg";
+import proposal2Image from "../assets/proposal/last/2P.jpeg";
+import proposal3Image from "../assets/proposal/last/3P.jpg";
+import proposal4Image from "../assets/proposal/last/4P.jpg";
+import proposal5Image from "../assets/proposal/last/5P.jpeg";
+import proposal6Image from "../assets/proposal/last/6P.jpeg";
+import proposal7Image from "../assets/proposal/last/7P.jpeg";
+import proposal8Image from "../assets/proposal/last/8P.jpeg";
+import proposal9Image from "../assets/proposal/last/9P.jpeg";
+import proposal10Image from "../assets/proposal/last/10P.jpeg";
+import proposal11Image from "../assets/proposal/last/11P.jpeg";
+import proposal12Image from "../assets/proposal/last/12P.jpeg";
+import proposal13Image from "../assets/proposal/last/13P.jpeg";
+import proposal14Image from "../assets/proposal/last/14P.jpeg";
+import proposal15Image from "../assets/proposal/last/15P.jpeg";
 
 const basePath = process.env.NODE_ENV === "production" ? "/sidneyandthomas" : "";
 
@@ -183,7 +198,108 @@ const continuationPhotoSequence: PhotoViewerImage[] = [
   { src: bigSur7Image, alt: "Big Sur photo 7" },
 ];
 
-const photoSequence: PhotoViewerImage[] = [...openingPhotoSequence, ...continuationPhotoSequence];
+/* eslint-disable max-len */
+const roadTripPhotoCaptions = [
+  "2 hours behind schedule, packing up the car",
+  "spent 40 minutes too long in REI grabbing last minute gear. we were joking that we would never leave seattle at this rate but alas we are on the road!",
+  "lunch stop : gas station tacos somewhere in olympia",
+  "astoria bridge! finally entering oregon",
+  "our first glimpse of the coast :’)",
+  "these homes are right in front of haystack rock... insane",
+  "in true PNW fashion it was raining in and out of our drive, but, the second our feet touches the beach- sun comes out for us",
+  "we’ve got an hour until sunset so we keep chugging to our final stop for the day",
+  "made it to cape kiwanda for sunset - again, not a single drop of rain as soon as we step out the car",
+  "the sandstone headland in cape kiwanda is pretty epic, you can climb to the top and have a view of the shore",
+  "hehe",
+  "little did sid know we were retracing steps of when we last did this roadtrip just us two and that it would end in our engagement.\nfirst photo: 2021\nsecond photo: 2026",
+  "beautiful formation",
+  "bye bye sun! as soon as we got in the car there was torrential downpour and we ran into a brewery for cover",
+  "we had initially planned to camp this evening. thankfully, we checked the weather before hitting the road and booked a motel",
+  "bright and early at 7 am for day 2, the oregon coast continues to amaze us",
+  "giant cala lillies at our coffee pit stop ",
+  "guided ATV ride in the sand dunes!",
+  "the scenery was insane and the ride was super thrilling. there were varying steep drops and drifting! ",
+  "group pic haha",
+  "american bbq lunch pit stop",
+  "pulled off the highway many times because we were repeatedly stunned one view after another",
+  "like... gorgeous",
+  "arrived at tu tu’ tun lodge - highly recommend if you want to go on an oregon road trip and splurge",
+  "the view outside our room. straight out of a caudalie ad",
+  "pool alongside the river",
+  "resident cat named sushi :’)",
+  "relaxing !",
+  "we were trying to avoid eating dinner at the resort in order to save money... we caved haha",
+  "it ended up being one of the best meals we’ve ever had. the chef man knows what he’s doing here. again, highly recommend staying here if you’re looking for a niche luxe road trip destination",
+  "shared a bottle of wine to end the night while playing scattegories",
+  "good morning, day 3! stopping for a diner moment on a road trip is a must... until the service is slow and sets us back 2 hours in our longest drive day LOL",
+  "gold beach is the most beautiful stretch of the oregon coast",
+  "our star driver taking on 6 hours of driving this day",
+  "enjoying our last oregon beach moment",
+  "entered the california state line and into the redwood forest",
+  "paid $15 to drive through a redwood tree!",
+  "wee!",
+  "big boy",
+  "daniel and kelly for size reference",
+  "6 pm at the thick of our long drive and still had 2 hours to drive out of the redwood forest. a little ramen break to push us through",
+  "there are kooky mystical signs driving through the winding redwood forest",
+  "finally made it out of the forest just in time to see the sun go down again",
+  "on a high... we are so lucky to experience this drive again",
+  "good night PCH",
+  "driving cliffside in the dark- beautiful but slightly scary.\n\nwe arrived to our hotel at 10 PM where our room only had one bed instead of two like we booked... LOL luckily they had another room available but a slight scare after a long day",
+  "waking up to the mendocino headlands",
+  "mendocino county had some seriously beautiful views and windig roads through greenery and ocean",
+  "stopped by sea ranch lodge for a walk on the property and what we discovered to be the best green smoothie on planet earth",
+  "we’ve never stayed here but hope to! the property is beautiful and captures the beauty of northern california",
+  "beautiful wildflowers on the headland... thomas was jokingly pretending down on one knee on our walk as it was so beautiful LOL",
+  "wow",
+  "we even got to see seals lying on the beach... are you kidding?",
+  "we continued our drive to hog island oyster co. for lunch",
+  "beautiful view for lunch",
+  "finally getting to camp! we decided to pick up some groceries and cook at camp to enjoy some california produce",
+  "this was the only campsite so we were virtually alone camping on this ridge",
+  "daniel and thomas cooking up a storm... kelly and sid get to relax as per usual",
+  "beautiful steak salad... produce in california is crazy good",
+  "insane",
+  "another wow moment",
+  "the days have been so perfect, we joke that we’ve levelled up every day of the trip",
+  "good morning! its stunning again",
+  "packed up camp and enjoyed the view one last time before we started heading to big sur",
+  "golden gate bridge! had a quick pit stop in SF for lunch. shout out luke’s local for a fire BLT",
+  "views making our way south",
+  "finally in big sur headed to our campsite. however, thomas drives past the turn for the campsite and says “guys, i have to tell you something- we aren’t camping tonight”\n\nthe 3 of us are in shocked, confused, and excited about what is to happen next",
+  "thomas checks us into post ranch inn where he suggests we all freshen up and go to a beach before dinner back at the resort\n\nsidney starts to properly clue into what’s happening after her alternate suggestion to lay by the resort pool is rejected",
+  "we get ready in near silence in our room in a peaceful way, we each take a moment to ourselves.\n\nsid does her make up on the balcony outlooking the mountains while thomas steams his shirt and gets ready",
+  "on our way!",
+  "eep!",
+  "we’re all admiring the view when thomas tells daniel and kelly that we’re going to peel off to the other side of the park",
+];
+/* eslint-enable max-len */
+
+const roadTripPhotoSequence = [...openingPhotoSequence, ...continuationPhotoSequence].map((image, index) => ({
+  ...image,
+  caption: roadTripPhotoCaptions[index < 12 ? index : index - 1],
+}));
+
+const endingPhotoSequence: PhotoViewerImage[] = [
+  { src: proposal1Image, alt: "Proposal photo 1" },
+  { src: proposal2Image, alt: "Proposal photo 2" },
+  { src: proposal3Image, alt: "Proposal photo 3" },
+  { src: proposal4Image, alt: "Proposal photo 4" },
+  { src: proposal5Image, alt: "Proposal photo 5" },
+  { src: proposal6Image, alt: "Proposal photo 6" },
+  { src: proposal7Image, alt: "Proposal photo 7" },
+  { src: proposal8Image, alt: "Proposal photo 8" },
+  { src: proposal9Image, alt: "Proposal photo 9" },
+  { src: proposal10Image, alt: "Proposal photo 10" },
+  { src: proposal11Image, alt: "Proposal photo 11" },
+  { src: proposal12Image, alt: "Proposal photo 12" },
+  { src: proposal13Image, alt: "Proposal photo 13" },
+  { src: proposal14Image, alt: "Proposal photo 14" },
+  { src: proposal15Image, alt: "Proposal photo 15" },
+];
+
+const photoSequence: PhotoViewerImage[] = [...roadTripPhotoSequence, ...endingPhotoSequence];
+const endingPhotoStartIndex = roadTripPhotoSequence.length;
 
 const galleryImages = photoSequence.map((image, index) => ({
   ...image,
@@ -370,18 +486,30 @@ export default function Proposal() {
           <PhotoViewer gallery={galleryImages} imageIndex={5} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={7} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={9} className={imageClassName} />
-          <div className="grid grid-cols-[auto_auto] gap-[60px] mt-[148px]">
+          <div className="w-full grid grid-cols-2 gap-[60px] mt-[148px]">
             <PhotoViewer
               gallery={galleryImages}
               imageIndex={11}
-              className={"h-auto w-auto max-w-[350px] max-h-[300px]"}
+              className="h-auto max-w-[350px]"
+              thumbnailClassName="h-full max-h-[300px]"
+              showCaption={false}
             />
             <PhotoViewer
               gallery={galleryImages}
               imageIndex={12}
-              className={"h-auto w-auto max-w-[350px] max-h-[300px] mt-[40px]"}
+              className="h-auto max-w-[350px] mt-[40px]"
+              thumbnailClassName="max-h-[300px]"
+              showCaption={false}
             />
           </div>
+          <p
+            className={`
+              w-full whitespace-pre-line text-center
+              font-['Times_New_Roman'] text-xs text-[#38385F] lg:text-sm
+            `}
+          >
+            {galleryImages[11].caption}
+          </p>
           <PhotoViewer gallery={galleryImages} imageIndex={14} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={16} className={imageClassName} />
           <PhotoViewer gallery={galleryImages} imageIndex={18} className={imageClassName} />
@@ -432,6 +560,27 @@ export default function Proposal() {
           />
         </div>
       </div>
+      <section className="mx-auto px-8 pb-20 text-[100px] leading-relaxed text-[#38385F]">
+        <h2 className="mb-6">The Proposal</h2>
+      </section>
+      <section
+        aria-label="Proposal photos"
+        className="mx-auto flex w-full max-w-[1004px] flex-col px-8 pb-20"
+      >
+        {endingPhotoSequence.map((image, index) => (
+          <PhotoViewer
+            key={image.alt}
+            gallery={galleryImages}
+            imageIndex={endingPhotoStartIndex + index}
+            className={`mx-auto w-full ${
+              [2, 3, 4, 6].includes(index) || (index >= 8 && index < endingPhotoSequence.length - 1)
+                ? "mb-[220px]"
+                : ""
+            }`}
+            sizes="(min-width: 1004px) 940px, calc(100vw - 64px)"
+          />
+        ))}
+      </section>
       <section className="mx-auto max-w-235 px-8 pb-20 font-['Times_New_Roman'] text-xl leading-relaxed text-[#38385F]">
         {closingMessage
           .trim()
