@@ -74,6 +74,7 @@ export default function PhotoViewer({ gallery, imageIndex, className }: PhotoVie
             src={image.src}
             alt={image.alt}
             basePath={basePath}
+            sizes="(min-width: 1440px) 522px, (min-width: 1024px) 36vw, calc(50vw - 67px)"
             className="absolute inset-0 h-full w-full object-contain"
           />
         </span>
